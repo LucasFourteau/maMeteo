@@ -1,4 +1,40 @@
 module.exports = {
   root: true,
-  extends: '@react-native-community',
+  plugins: ['@typescript-eslint', 'import'],
+  extends: [
+    '@react-native-community',
+    'airbnb-typescript',
+    'plugin:@typescript-eslint/recommended',
+    'prettier',
+    'prettier/@typescript-eslint',
+    'prettier/react',
+    '@types/styled-components-react-native',
+    './.eslint-ts-naming-convention.js',
+  ],
+  env: {
+    node: true,
+    browser: true,
+    jest: true,
+  },
+  parserOptions: {
+    project: './tsconfig.json',
+  },
+  globals: {
+    __DEV__: false,
+  },
+  rules: {
+    'react/jsx-uses-react': 'error',
+    'max-len': 'off',
+    '@typescript-eslint/semi': 'off',
+    'react/prop-types': 'off',
+    'react/react-in-jsx-scope': 'error',
+    'comma-dangle': ['error', 'always-multiline'],
+    'import/no-extraneous-dependencies': 'off',
+    '@typescript-eslint/no-empty-interface': 'off',
+    '@typescript-eslint/no-use-before-define': 'off',
+    'react-hooks/exhaustive-deps': 'off',
+    '@typescript-eslint/no-unused-vars': 'error',
+    'prefer-template': 'warn',
+     '@typescript-eslint/default-param-last': 'off',
+  },
 };
