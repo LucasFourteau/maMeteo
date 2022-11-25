@@ -1,0 +1,2 @@
+export { OpenweathermapApi } from './Openweathermap';
+
