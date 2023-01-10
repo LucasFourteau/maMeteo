@@ -30,7 +30,7 @@ export const Search: FunctionComponent = () => {
   return (
     <Container>
       <Title>Live{'\n'}Forecast</Title>
-      <Input value={city} onChangeText={setCity} placeholder="Ma belle ville" />
+      <Input value={city} onChangeText={setCity} placeholder="Me belle ville" />
       <Button onPress={search}>
         <Label>Recherche</Label>
       </Button>
